@@ -19,6 +19,21 @@ process.on('uncaughtException', function (err) {
 
 var tests = module.exports = {};
 
+tests['construct'] = function (test) {
+  var pusherCalled = []
+    , ConstructTest = createSchema('ConstructTest', pusher)
+    , object = new ConstructTest({array: [1,2,3]});
+
+  test.deepEqual([].slice.call(object.array), [1,2,3]);
+  test.deepEqual(pusherCalled, [1,2,3]);
+  test.done();
+
+  function pusher (v) {
+    pusherCalled.push(v);
+    return v;
+  }
+};
+
 tests['push'] = function (test) {
   var pusherCalled = []
     , PushTest = createSchema('PushTest', pusher)

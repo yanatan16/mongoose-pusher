@@ -61,9 +61,11 @@ function wrapFunctions(arr, pusher, puller) {
 
   // Puller could be called on elements that arent in the set
   arr.pull = function () {
-    return mgpull.apply(arr, map.call(arguments, function (v) {
+    map.call(arguments, function (v) {
       return bpuller(arr._cast(v));
-    }));
+    });
+    // Call pull without mapping the arguments, puller isn't supposed to be used that way
+    return mgpull.apply(arr, arguments);
   };
 
   arr.pop = function () {
@@ -101,6 +103,12 @@ function pusherPlugin(schema) {
         wrapFunctions(arr, pusher, puller);
         return arr;
       });
+
+      if (pusher && !schemaType.options.set /* dont override their setter */) {
+        schemaType.set(function (vals) {
+          return vals.map(pusher.bind(this));
+        });
+      }
     }
   });
 }
