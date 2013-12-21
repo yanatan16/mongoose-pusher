@@ -1,6 +1,6 @@
 {
   "name": "mongoose-pusher",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Mongoose plugin to allow a \"pusher\" function which acts like setter for arrays.",
   "main": "index.js",
   "scripts": {
