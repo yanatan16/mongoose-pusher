@@ -65,6 +65,13 @@ someObject.someArrayField.$shift();
 - `push` or `pull` are not mutually required or exclusive, that is they do not have to both be specified, but they can be.
 - Use of `push` will override the setter on the field, so if you put a setter in, `push` will not be called upon construction.
 
+## Tests
+
+```
+npm install -g nodeunit
+nodeunit tests
+```
+
 ## License
 
 MIT found in LICENSE file.

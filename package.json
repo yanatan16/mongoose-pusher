@@ -4,7 +4,7 @@
   "description": "Mongoose plugin to allow a \"pusher\" function which acts like setter for arrays.",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit tests"
+    "test": "nodeunit tests.js"
   },
   "repository": {
     "type": "git",
