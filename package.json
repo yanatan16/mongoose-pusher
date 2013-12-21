@@ -1,0 +1,28 @@
+{
+  "name": "mongoose-pusher",
+  "version": "0.0.0",
+  "description": "Mongoose plugin to allow a \"pusher\" function which acts like setter for arrays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yanatan16/mongoose-pusher"
+  },
+  "keywords": [
+    "mongoose",
+    "plugin",
+    "pusher",
+    "setter"
+  ],
+  "author": "Jon Eisen <jon@joneisen.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanatan16/mongoose-pusher/issues"
+  },
+  "homepage": "https://github.com/yanatan16/mongoose-pusher",
+  "dependencies": {
+    "mongoose": "~3.8.3"
+  }
+}
