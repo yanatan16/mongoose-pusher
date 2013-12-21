@@ -1,4 +1,4 @@
-# mongoose-pusher
+# mongoose-pusher [![Build Status](https://travis-ci.org/yanatan16/mongoose-pusher.png)](https://travis-ci.org/yanatan16/mongoose-pusher)
 
 Mongoose plugin to allow "pusher" and "puller" functions which acts like setters for arrays.
 
