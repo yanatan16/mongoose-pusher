@@ -69,7 +69,7 @@ someObject.someArrayField.$shift();
 
 ```
 npm install -g nodeunit
-nodeunit tests
+nodeunit tests.js
 ```
 
 ## License
